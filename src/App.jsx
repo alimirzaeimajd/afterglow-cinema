@@ -7,7 +7,6 @@ import "./genre-filter.css";
 function App() {
   const [selectedGenre, setSelectedGenre] = useState("All");
 
-  // Build unique genre list from the first genre of each movie
   const genres = [
     "All",
     ...new Set(MOVIES.flatMap((m) => m.genres.split("/").map((g) => g.trim()))),
