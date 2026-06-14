@@ -1,19 +1,17 @@
+import { useState } from "react";
 import "./App.css";
 import { MOVIES } from "./movies";
 import MovieCard from "./Components/MovieCard";
-import { useState } from "react";
+import "./genre-filter.css";
 
 function App() {
-  const [selectedGenre, setSelectedGenre] = useState();
+  const [selectedGenre, setSelectedGenre] = useState("All");
 
-  const genres = MOVIES.map((movie) => {
-    return movie.genres;
-  });
-  console.log(genres);
+  // Build unique genre list from the first genre of each movie
+  const genres = ["All", ...new Set(MOVIES.map((m) => m.genres.split("/")[0].trim()))];
 
-  function handleSelect(selectedButton) {
-    setSelectedGenre(selectedButton);
-  }
+  const filteredMovies =
+    selectedGenre === "All" ? MOVIES : MOVIES.filter((m) => m.genres.includes(selectedGenre));
 
   return (
     <div className="page-wrapper">
@@ -33,24 +31,28 @@ function App() {
         </div>
       </header>
 
-      <main className="movies-grid">
-        {MOVIES.map((movie, index) => (
-          <MovieCard key={movie.title} {...movie} index={index} />
+      {/* Genre filter tabs */}
+      <div className="genre-filter">
+        {genres.map((genre) => (
+          <button
+            key={genre}
+            className={`genre-filter__btn${selectedGenre === genre ? " genre-filter__btn--active" : ""}`}
+            onClick={() => setSelectedGenre(genre)}
+          >
+            {genre}
+          </button>
         ))}
-      </main>
-
-      <div>
-        {genres.map((genre) => {
-          return (
-            <button key={genre} onClick={() => handleSelect(genre)}>
-              {genre}
-            </button>
-          );
-        })}
-
-        {!selectedGenre ? <p>please select a genre!</p> : null}
-        {selectedGenre ? <p>{selectedGenre}</p> : null}
       </div>
+
+      <main className="movies-grid">
+        {filteredMovies.length > 0 ? (
+          filteredMovies.map((movie, index) => (
+            <MovieCard key={movie.title} {...movie} index={index} />
+          ))
+        ) : (
+          <p className="movies-empty">No films in this category yet.</p>
+        )}
+      </main>
     </div>
   );
 }

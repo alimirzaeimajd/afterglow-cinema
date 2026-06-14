@@ -1,0 +1,40 @@
+/* ── genre filter tabs (add to bottom of App.css) ── */
+.genre-filter {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.genre-filter__btn {
+  font-family: "DM Sans", system-ui, sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+  transition: color var(--transition), background var(--transition), border-color var(--transition);
+}
+
+.genre-filter__btn:hover {
+  color: var(--text-primary);
+  border-color: rgba(230, 57, 70, 0.35);
+}
+
+.genre-filter__btn--active {
+  color: var(--accent);
+  background: var(--accent-dim);
+  border-color: rgba(230, 57, 70, 0.35);
+}
+
+.movies-empty {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  font-style: italic;
+  padding: 2rem 0;
+}
