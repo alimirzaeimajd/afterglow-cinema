@@ -1,8 +1,20 @@
 import "./App.css";
 import { MOVIES } from "./movies";
 import MovieCard from "./Components/MovieCard";
+import { useState } from "react";
 
 function App() {
+  const [selectedGenre, setSelectedGenre] = useState();
+
+  const genres = MOVIES.map((movie) => {
+    return movie.genres;
+  });
+  console.log(genres);
+
+  function handleSelect(selectedButton) {
+    setSelectedGenre(selectedButton);
+  }
+
   return (
     <div className="page-wrapper">
       <header className="page-header">
@@ -12,8 +24,7 @@ function App() {
             Movies I Watched <span>Recently</span>
           </h1>
           <p className="page-header__subtitle">
-            A few films worth your time — ranked by how long I thought about
-            them after.
+            A few films worth your time — ranked by how long I thought about them after.
           </p>
         </div>
         <div className="page-header__count">
@@ -27,6 +38,19 @@ function App() {
           <MovieCard key={movie.title} {...movie} index={index} />
         ))}
       </main>
+
+      <div>
+        {genres.map((genre) => {
+          return (
+            <button key={genre} onClick={() => handleSelect(genre)}>
+              {genre}
+            </button>
+          );
+        })}
+
+        {!selectedGenre ? <p>please select a genre!</p> : null}
+        {selectedGenre ? <p>{selectedGenre}</p> : null}
+      </div>
     </div>
   );
 }
