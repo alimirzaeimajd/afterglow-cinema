@@ -299,7 +299,34 @@ body {
   margin: 0;
 }
 
-.movie-card__imdb-btn {
+.movie-card__actions {
+  margin-top: auto;
+  padding-top: 0.8rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.movie-card__imdb-btn,
+.movie-card__blog-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem;
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    color var(--transition);
+}
+
+/* .movie-card__imdb-btn {
   margin-top: auto;
   padding-top: 0.9rem;
   display: inline-flex;
@@ -321,13 +348,24 @@ body {
     border-color var(--transition),
     color var(--transition),
     transform var(--transition);
-}
+} */
 
 .movie-card__imdb-btn:hover {
   background: var(--accent);
   border-color: var(--accent);
   color: #fff;
   transform: translateY(-1px);
+}
+
+.movie-card__blog-btn {
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  background: transparent;
+}
+
+.movie-card__blog-btn:hover {
+  color: var(--text-primary);
+  border-color: var(--text-muted);
 }
 
 /* ── responsive ── */
