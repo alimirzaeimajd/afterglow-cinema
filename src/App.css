@@ -480,3 +480,71 @@ body {
   border-color: var(--accent);
   color: var(--accent);
 }
+
+.placeholder-page {
+  padding: 4rem 0;
+}
+
+.placeholder-page__title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.placeholder-page__text {
+  color: var(--text-muted);
+}
+
+.blog-index-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.blog-index-list a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.blog-index-list a:hover {
+  color: var(--accent);
+}
+
+.blog-post {
+  max-width: 760px;
+  padding: 3rem 0;
+}
+
+.blog-post__back {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.blog-post__poster {
+  width: 100%;
+  max-width: 280px;
+  border-radius: var(--card-radius);
+  margin: 1.5rem 0;
+}
+
+.blog-post__title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.2rem;
+  margin: 0 0 0.25rem;
+}
+
+.blog-post__date {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-post__content {
+  line-height: 1.8;
+  color: var(--text-primary);
+  font-weight: 300;
+}
