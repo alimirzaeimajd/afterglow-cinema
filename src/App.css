@@ -415,3 +415,30 @@ body {
     transition: none !important;
   }
 }
+
+.load-more-wrap {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 4rem;
+}
+
+.load-more-btn {
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.7rem 1.8rem;
+  cursor: pointer;
+  transition:
+    border-color var(--transition),
+    color var(--transition);
+}
+
+.load-more-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
