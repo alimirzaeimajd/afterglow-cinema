@@ -1,5 +1,6 @@
 export const BLOG_POSTS = {
   "queen-of-chess": {
+    type: "movie",
     title: "Why Queen of Chess Hit Different",
     date: "2026-05-12",
     content:
