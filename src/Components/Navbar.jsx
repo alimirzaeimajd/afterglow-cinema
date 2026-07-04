@@ -52,7 +52,7 @@ export default function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar__inner">
-        <span className="navbar__brand">MyWatchlist</span>
+        <span className="navbar__brand">Afterglow Cinema</span>
 
         <div className="navbar__links">
           {NAV_LINKS.map((link) => (

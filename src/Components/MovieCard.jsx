@@ -32,7 +32,7 @@ export default function MovieCard({ image, title, genres, length, rating, imdbUr
           </a>
           {hasBlogPost && (
             <Link className="movie-card__blog-btn" to={`/blog/${slug}`}>
-              Blog
+              Review
             </Link>
           )}
         </div>

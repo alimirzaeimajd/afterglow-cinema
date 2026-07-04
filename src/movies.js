@@ -2,6 +2,8 @@ import greatestHitsImg from "./assets/greatest-hits.jpg";
 import queenOfChessImg from "./assets/queen-of-chess.jpg";
 import scottPilgrimVsTheWorldImg from "./assets/scott-pilgrim-vs-the-world.jpg";
 import fiveHundredDaysOfSummerImg from "./assets/five-hundred-days-of-summer.jpg";
+import dallasBuyersClub from "./assets/dallas-buyers-club.jpg";
+import snowden from "./assets/snowden.jpg";
 
 export const MOVIES = [
   {
@@ -43,5 +45,25 @@ export const MOVIES = [
     synopsis:
       "Scott Pilgrim meets Ramona and instantly falls in love with her. But when he meets one of her exes at a band competition, he realises that he has to deal with all seven of her exes to woo her.",
     imdbUrl: "https://www.imdb.com/title/tt0446029",
+  },
+  {
+    image: dallasBuyersClub,
+    title: "Dallas Buyers Club (2013)",
+    genres: "Drama",
+    length: "117 min",
+    rating: 8.5,
+    synopsis:
+      "In 1985 Dallas, electrician and hustler Ron Woodroof works around the system to help AIDS patients get the medication they need after he is diagnosed with the disease.",
+    imdbUrl: "https://www.imdb.com/title/tt0790636/",
+  },
+  {
+    image: snowden,
+    title: "Snowden (2016)",
+    genres: "Thriller/Action",
+    length: "134 min",
+    rating: 6.5,
+    synopsis:
+      "The NSA's illegal surveillance techniques are leaked to the public by one of the agency's employees, Edward Snowden, in the form of thousands of classified documents distributed to the press.",
+    imdbUrl: "https://www.imdb.com/title/tt3774114/",
   },
 ];
