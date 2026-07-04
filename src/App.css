@@ -26,6 +26,13 @@ body {
   font-family: "DM Sans", system-ui, sans-serif;
   min-height: 100vh;
   margin: 0;
+  /* the app supports both themes, so let native form controls
+     (scrollbars, checkboxes, etc.) pick a matching style */
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   /* subtle radial glow for depth */
   background-image: radial-gradient(
     ellipse 80% 40% at 50% -10%,
@@ -118,6 +125,30 @@ body {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: var(--text-muted);
+}
+
+/* ── home hero ── */
+.home-hero {
+  padding: 5rem 0 4rem;
+  text-align: left;
+}
+
+.home-hero__subtitle {
+  font-style: normal;
+  max-width: 480px;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.home-hero__actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.home-hero__secondary {
+  flex: none;
+  padding: 0.7rem 1.8rem;
 }
 
 /* ── grid ── */
@@ -405,3 +436,4 @@ body {
   color: var(--text-primary);
   font-weight: 300;
 }
+

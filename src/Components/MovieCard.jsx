@@ -10,7 +10,13 @@ export default function MovieCard({ image, title, genres, length, rating, imdbUr
   return (
     <article className="movie-card">
       <div className="movie-card__img-wrap">
-        <img className="movie-card__img" src={image} alt={title} />
+        <img
+          className="movie-card__img"
+          src={image}
+          alt={title}
+          loading="lazy"
+          decoding="async"
+        />
       </div>
       <div className="movie-card__body">
         <h2 className="movie-card__title">{title}</h2>

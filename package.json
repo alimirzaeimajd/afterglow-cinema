@@ -1,7 +1,8 @@
 {
-  "name": "reactjs-app",
+  "name": "afterglow-cinema",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
+  "description": "A personal movie, TV, and anime journal with curated lists and write-ups.",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,8 +11,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.3.8",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "react-router-dom": "^7.18.1"
@@ -28,3 +27,4 @@
     "vite": "^8.0.12"
   }
 }
+
